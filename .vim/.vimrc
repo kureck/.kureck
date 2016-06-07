@@ -1,6 +1,7 @@
 set nocompatible
 set encoding=utf8
 set backspace=indent,eol,start
+set shortmess+=c
 
 "Pathogen
 execute pathogen#infect()
@@ -27,11 +28,11 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " Clojure
-Plugin 'git://github.com/guns/vim-clojure-static.git'
+Plugin 'guns/vim-clojure-static'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/paredit.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/paredit.vim'
 Plugin 'bhurlow/vim-parinfer'
 
 " Python and Go
@@ -133,6 +134,9 @@ map <Leader>k <Plug>(easymotion-k)
 " Gif config
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+" Toggle Paredit
+nmap <Leader>} :PareditToggle<CR>
 
 " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
 " Without these mappings, `n` & `N` works fine. (These mappings just provide
