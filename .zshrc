@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Alias
+alias tmux="tmux -2"
+
 for config_file (~/.lett/lib/*.lsh); do
   source $config_file
 done
