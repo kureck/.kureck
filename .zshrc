@@ -93,3 +93,15 @@ alias tmux="tmux -2"
 for config_file (~/.lett/lib/*.lsh); do
   source $config_file
 done
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+eval "$(pyenv virtualenv-init -)"
+
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+
+alias manage='python $VIRTUAL_ENV/../manage.py'
+
+ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
