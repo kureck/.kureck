@@ -6,7 +6,7 @@ set shortmess+=c
 "Pathogen
 execute pathogen#infect()
 syntax on
-filetype plugin indent off
+"filetype plugin indent off
 
 highlight BadWhitespace ctermbg=red guibg=red
 
