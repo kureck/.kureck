@@ -87,9 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Alias
-alias tmux="tmux -2"
-
 for config_file (~/.lett/lib/*.lsh); do
   source $config_file
 done
@@ -100,8 +97,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 eval "$(pyenv virtualenv-init -)"
 
-export DYLD_LIBRARY_PATH=$ORACLE_HOME
-
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
 ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
+
+# load direnv
+eval "$(direnv hook zsh)"
