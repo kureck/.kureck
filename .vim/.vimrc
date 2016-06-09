@@ -27,6 +27,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
@@ -38,7 +39,6 @@ Plugin 'bhurlow/vim-parinfer'
 
 " Python and Go
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'vim-scripts/swap-parameters'
@@ -46,7 +46,6 @@ Plugin 'fatih/vim-go'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ihacklog/HiCursorWords'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'marcindziedzic/vim-numbertoggle'
 
