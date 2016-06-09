@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rking/ag.vim'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
@@ -222,3 +223,6 @@ au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" Ag
+let g:ag_working_path_mode= 'r'
