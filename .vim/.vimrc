@@ -28,6 +28,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
@@ -48,6 +49,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'ihacklog/HiCursorWords'
 Plugin 'ervandew/supertab'
 Plugin 'marcindziedzic/vim-numbertoggle'
+
+" Rails
+Plugin 'tpope/vim-rails'
 
 " HTML5 and JavaScript
 Plugin 'othree/html5.vim'
