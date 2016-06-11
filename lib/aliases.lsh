@@ -9,7 +9,14 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
-# convenience aliases for editing configs
+# convenience aliases for editing configs with vim
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+
+# emacs related
+alias em='emacsclient -t'
+alias enw='emacs -nw'
+
+# python related
+alias mkvenv3='mkvirtualenv --python=`which python3`'
