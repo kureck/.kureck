@@ -102,6 +102,7 @@ alias manage='python $VIRTUAL_ENV/../manage.py'
 # http://virtualenvwrapper.readthedocs.io/
 # http://docs.python-guide.org/en/latest/dev/virtualenvs/
 export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 
 ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
@@ -109,9 +110,9 @@ ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
 # load direnv
 eval "$(direnv hook zsh)"
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOROOT/bin
-export GO15VENDOREXPERIMENT=1
+#export GOPATH=$HOME/go
+#export PATH=$PATH:$GOPATH/bin
+#export GOROOT=/usr/local/opt/go/libexec
+#export PATH=$PATH:$GOROOT/bin
+#export GO15VENDOREXPERIMENT=1
 
