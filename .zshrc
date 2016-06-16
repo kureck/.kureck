@@ -105,6 +105,8 @@ export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 
+source ~/.profile
+
 ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=3'
 
 # load direnv

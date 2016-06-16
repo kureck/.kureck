@@ -39,7 +39,9 @@ values."
      markdown
      org
      (python :variable python-mode-hook 'anaconda-mode)
-     (ruby :variables ruby-version-manager 'rvm)
+     (ruby :variables
+           ruby-version-manager 'rvm
+           ruby-enable-ruby-on-rails-support t)
      ruby-on-rails
      scala
      (shell :variables
@@ -272,3 +274,20 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(paradox-github-token t)
+ ;; ruby
+ (setq flycheck-disable-checker '(ruby-rubylint))
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:background nil))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
