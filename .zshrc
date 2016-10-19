@@ -118,3 +118,6 @@ eval "$(direnv hook zsh)"
 #export PATH=$PATH:$GOROOT/bin
 #export GO15VENDOREXPERIMENT=1
 
+
+export NVM_DIR="/Users/kureck/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

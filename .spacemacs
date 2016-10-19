@@ -28,17 +28,19 @@ values."
      clojure
      colors
      dockerfile
+     elm
      emacs-lisp
      git
      github
      go
      html
      java
-     (javascript :variables
+    (javascript :variables
                  javascript-disable-tern-port-files t)
      markdown
      org
      (python :variable python-mode-hook 'anaconda-mode)
+     react
      (ruby :variables
            ruby-version-manager 'rvm
            ruby-enable-ruby-on-rails-support t)
@@ -50,7 +52,8 @@ values."
      shell-scripts
      spell-checking
      sql
-     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips nil)
      themes-megapack
      unimpaired
      version-control
@@ -252,6 +255,17 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+
+   ;; js indentation
+   js2-basic-offset 2
+   js-indent-level 2
+
+   ;; web-mode react
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2
    ))
 
 (defun dotspacemacs/user-init ()
@@ -270,7 +284,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  )
+  ;; ruby
+  (setq flycheck-disable-checker '(ruby-rubylint))
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-elm))
+  (with-eval-after-load 'web-mode
+    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
+ )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -280,9 +302,7 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(paradox-github-token t)
- ;; ruby
- (setq flycheck-disable-checker '(ruby-rubylint))
- )
+  )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
